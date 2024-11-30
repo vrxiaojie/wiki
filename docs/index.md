@@ -5,19 +5,20 @@ layout: home
 hero:
   name: "VR小杰的"
   text: "技术文档中心"
-  tagline: My great project tagline
+  tagline: 记录开发点滴，提供详尽教程
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 查看文档
       link: /markdown-examples
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 个人博客
+      link: https://blog.vrxiaojie.top
 
 
 features:
   - title: Feature A
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    link: ./
   - title: Feature B
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Feature C
