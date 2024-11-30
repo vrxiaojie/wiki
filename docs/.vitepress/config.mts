@@ -4,7 +4,8 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "VR小杰的技术文档中心",
   description: "",
-  base: '/wiki/',
+  // base: '/wiki/',
+  lang: 'zh-CN',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
