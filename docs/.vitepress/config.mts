@@ -1,7 +1,8 @@
 import { defineConfig } from 'vitepress'
+import { withSidebar } from 'vitepress-sidebar';
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+const vitePressOptions = {
   title: "VR小杰的技术文档中心",
   description: "",
   // base: '/wiki/',
@@ -24,7 +25,18 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/vrxiaojie' }
     ]
   }
-})
+}
+
+
+
+const vitePressSidebarOptions = {
+  // VitePress Sidebar's options here...
+  documentRootPath: '/docs',
+  collapsed: false,
+  capitalizeFirst: true
+};
+
+export default defineConfig(withSidebar(vitePressOptions, vitePressSidebarOptions));
