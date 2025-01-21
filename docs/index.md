@@ -17,8 +17,8 @@ hero:
 
 features:
   - title: 基于CW32的物联网电压电流表
-    details: 
-    link: /
+    details: 使用CW32F030C8T6做主控，ESP8266+MQTT协议联网上传数据的电压电流表
+    link: /CW32-volt-ammeter/基于CW32的物联网电压电流表/介绍
   - title: 瑞萨RA4E2开发板
     details: 配置瑞萨MCU开发环境,学习使用瑞萨MCU的UART、I2C、SPI等
     link: /RA4E2-Develop-Board/瑞萨RA4E2开发板/00 开发板开箱与环境搭建/前言
