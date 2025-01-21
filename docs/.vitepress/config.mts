@@ -1,5 +1,94 @@
 import { defineConfig } from 'vitepress'
 import { withSidebar } from 'vitepress-sidebar';
+import markdownItKatex from 'markdown-it-katex'
+
+const customElements = [
+  'math',
+  'maction',
+  'maligngroup',
+  'malignmark',
+  'menclose',
+  'merror',
+  'mfenced',
+  'mfrac',
+  'mi',
+  'mlongdiv',
+  'mmultiscripts',
+  'mn',
+  'mo',
+  'mover',
+  'mpadded',
+  'mphantom',
+  'mroot',
+  'mrow',
+  'ms',
+  'mscarries',
+  'mscarry',
+  'mscarries',
+  'msgroup',
+  'mstack',
+  'mlongdiv',
+  'msline',
+  'mstack',
+  'mspace',
+  'msqrt',
+  'msrow',
+  'mstack',
+  'mstack',
+  'mstyle',
+  'msub',
+  'msup',
+  'msubsup',
+  'mtable',
+  'mtd',
+  'mtext',
+  'mtr',
+  'munder',
+  'munderover',
+  'semantics',
+  'math',
+  'mi',
+  'mn',
+  'mo',
+  'ms',
+  'mspace',
+  'mtext',
+  'menclose',
+  'merror',
+  'mfenced',
+  'mfrac',
+  'mpadded',
+  'mphantom',
+  'mroot',
+  'mrow',
+  'msqrt',
+  'mstyle',
+  'mmultiscripts',
+  'mover',
+  'mprescripts',
+  'msub',
+  'msubsup',
+  'msup',
+  'munder',
+  'munderover',
+  'none',
+  'maligngroup',
+  'malignmark',
+  'mtable',
+  'mtd',
+  'mtr',
+  'mlongdiv',
+  'mscarries',
+  'mscarry',
+  'msgroup',
+  'msline',
+  'msrow',
+  'mstack',
+  'maction',
+  'semantics',
+  'annotation',
+  'annotation-xml'
+]
 
 // https://vitepress.dev/reference/site-config
 const vitePressOptions = {
@@ -41,7 +130,19 @@ const vitePressOptions = {
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vrxiaojie' },
 
-    ]
+    ],
+  },
+  markdown: {
+    config: (md) => {
+      md.use(markdownItKatex)
+    }
+  },
+  vue: {
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => customElements.includes(tag)
+      }
+    }
   }
 }
 
@@ -50,9 +151,9 @@ const vitePressOptions = {
 const vitePressSidebarOptions = [
   {
     documentRootPath: 'docs',
-    scanStartPath: '基于CW32的物联网电压电流表',
-    // basePath: '/基于CW32的物联网电压电流表/',
-    resolvePath: '/基于CW32的物联网电压电流表/',
+    scanStartPath: 'CW32-volt-ammeter',
+    basePath: '/CW32-volt-ammeter/',
+    resolvePath: '/CW32-volt-ammeter/',
     useTitleFromFileHeading: true
   },
   {
@@ -66,5 +167,7 @@ const vitePressSidebarOptions = [
 
   }
 ];
+
+
 
 export default defineConfig(withSidebar(vitePressOptions, vitePressSidebarOptions));
