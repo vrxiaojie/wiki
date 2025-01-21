@@ -154,7 +154,9 @@ const vitePressSidebarOptions = [
     scanStartPath: 'CW32-volt-ammeter',
     basePath: '/CW32-volt-ammeter/',
     resolvePath: '/CW32-volt-ammeter/',
-    useTitleFromFileHeading: true
+    useTitleFromFileHeading: true,
+    sortMenusByFrontmatterOrder: true,
+    collapsed: true,
   },
   {
     documentRootPath: 'docs',
