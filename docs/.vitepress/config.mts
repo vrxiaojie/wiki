@@ -111,6 +111,7 @@ const vitePressOptions = {
             footer: {
               selectText: "选择",
               navigateText: "切换",
+              closeText: "退出",
             },
           },
         },
@@ -136,6 +137,14 @@ const vitePressOptions = {
       level: [2, 6],
       label: '本页导航'
     },
+    lastUpdated: {
+      text: '上一次更新时间',
+      formatOptions: {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      }
+    },
+
   },
 
   markdown: {
