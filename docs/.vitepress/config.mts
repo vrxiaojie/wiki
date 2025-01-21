@@ -116,8 +116,10 @@ const vitePressOptions = {
         },
       },
     },
+    editLinks: true,
     nav: [
       { text: '首页', link: '/' },
+      { text: '目录', link: '/menu' },
       {
         text: '项目合集',
         items: [
