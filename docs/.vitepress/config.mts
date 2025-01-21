@@ -131,9 +131,13 @@ const vitePressOptions = {
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vrxiaojie' },
-
     ],
+    outline: {
+      level: [2, 6],
+      label: '本页导航'
+    },
   },
+
   markdown: {
     config: (md) => {
       md.use(markdownItKatex)
