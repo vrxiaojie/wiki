@@ -146,6 +146,9 @@ const vitePressOptions = {
     },
 
   },
+  sitemap: {
+    hostname: 'https://wiki.vrxiaojie.top'
+  },
 
   markdown: {
     config: (md) => {
