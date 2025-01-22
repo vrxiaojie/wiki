@@ -14,7 +14,7 @@ hero:
       text: 🔗个人博客
       link: https://blog.vrxiaojie.top
   image:
-    src: public/logo.png
+    src: /logo.png
 
 
 features:
