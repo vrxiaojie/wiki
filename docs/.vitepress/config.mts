@@ -95,6 +95,9 @@ const vitePressOptions = {
   title: "VR小杰的技术文档中心",
   description: "",
   lang: 'zh-CN',
+  head: [
+    ['link', { rel: 'icon', href: 'public/favicon.ico' }]// 设置网站图标
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     search: {
