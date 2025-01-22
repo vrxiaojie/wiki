@@ -96,7 +96,7 @@ const vitePressOptions = {
   description: "",
   lang: 'zh-CN',
   head: [
-    ['link', { rel: 'icon', href: 'public/favicon.ico' }]// 设置网站图标
+    ['link', { rel: 'icon', href: '/public/favicon.ico' }]// 设置网站图标
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
