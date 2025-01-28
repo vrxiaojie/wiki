@@ -3,7 +3,7 @@
 ## 开发板学习
 [瑞萨RA4E2开发板](</RA4E2-Develop-Board/瑞萨RA4E2开发板/00 开发板开箱与环境搭建/前言>)
 
-[瑞萨RA2L1开发板](</RA2L1-Develop-Board/瑞萨RA2L1开发板/00 开箱、创建工程模板/开箱>)
+[瑞萨RA2L1开发板](</RA2L1-Develop-Board/>)
 
 
 ## DIY项目
