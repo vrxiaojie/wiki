@@ -127,9 +127,9 @@ const vitePressOptions = {
       {
         text: '项目合集',
         items: [
-          { text: '基于CW32的物联网电压电流表', link: '/CW32-volt-ammeter/基于CW32的物联网电压电流表/介绍' },
-          { text: '瑞萨RA4E2开发板', link: '/RA4E2-Develop-Board/瑞萨RA4E2开发板/00 开发板开箱与环境搭建/前言' },
-          { text: '瑞萨RA2L1开发板', link: '/RA2L1-Develop-Board' },
+          { text: '基于CW32的物联网电压电流表', link: '/CW32-volt-ammeter/' },
+          { text: '瑞萨RA4E2开发板', link: '/RA4E2-Develop-Board/' },
+          { text: '瑞萨RA2L1开发板', link: '/RA2L1-Develop-Board/' },
         ]
       }
     ],
@@ -178,7 +178,7 @@ const vitePressSidebarOptions = [
     resolvePath: '/CW32-volt-ammeter/',
     useTitleFromFileHeading: true,
     sortMenusByFrontmatterOrder: true,
-    collapsed: true,
+    collapsed: false,
   },
   {
     documentRootPath: 'docs',
@@ -187,7 +187,7 @@ const vitePressSidebarOptions = [
     basePath: '/RA4E2-Develop-Board/',
     useTitleFromFileHeading: true,
     sortMenusByFrontmatterOrder: true,
-    collapsed: true,
+    collapsed: false,
   },
   {
     documentRootPath: 'docs',
@@ -196,7 +196,7 @@ const vitePressSidebarOptions = [
     basePath: '/RA2L1-Develop-Board/',
     useTitleFromFileHeading: true,
     sortMenusByFrontmatterOrder: true,
-    collapsed: true,
+    collapsed: false,
   },
 ];
 
