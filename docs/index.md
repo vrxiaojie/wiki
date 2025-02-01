@@ -27,6 +27,9 @@ features:
   - title: 瑞萨RA2L1开发板
     details: 基于RA2L1开发板做一个桌面时钟温湿度计摆件的项目
     link: /RA2L1-Develop-Board/
+  - title: 香橙派5部署Deepseek-R1-1.5B蒸馏模型
+    link: /Deepseek-R1-RK3588-OrangePi5/
+    details: 基于RKLLM，在RK3588S上部署Deepseek-R1 1.5B的蒸馏模型
 
 ---
 

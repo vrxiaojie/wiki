@@ -131,6 +131,12 @@ const vitePressOptions = {
           { text: '瑞萨RA4E2开发板', link: '/RA4E2-Develop-Board/' },
           { text: '瑞萨RA2L1开发板', link: '/RA2L1-Develop-Board/' },
         ]
+      },
+      {
+        text: '嵌入式教程',
+        items: [
+          { text: '香橙派5部署Deepseek-R1-1.5B蒸馏模型', link: '/Deepseek-R1-RK3588-OrangePi5/' },
+        ]
       }
     ],
 
@@ -194,6 +200,15 @@ const vitePressSidebarOptions = [
     scanStartPath: 'RA2L1-Develop-Board',
     resolvePath: '/RA2L1-Develop-Board/',
     basePath: '/RA2L1-Develop-Board/',
+    useTitleFromFileHeading: true,
+    sortMenusByFrontmatterOrder: true,
+    collapsed: false,
+  },
+  {
+    documentRootPath: 'docs',
+    scanStartPath: 'Deepseek-R1-RK3588-OrangePi5',
+    resolvePath: '/Deepseek-R1-RK3588-OrangePi5/',
+    basePath: '/Deepseek-R1-RK3588-OrangePi5/',
     useTitleFromFileHeading: true,
     sortMenusByFrontmatterOrder: true,
     collapsed: false,
