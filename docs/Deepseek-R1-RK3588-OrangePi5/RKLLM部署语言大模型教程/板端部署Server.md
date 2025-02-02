@@ -1,3 +1,6 @@
+---
+order : 6
+---
 # 板端部署Server-Gradio
 在开发板上部署服务器能让外部网络访问到，且交互界面简洁高效。可以选用Flask或者Gradio部署，这里选择Gradio
 
