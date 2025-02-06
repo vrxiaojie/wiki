@@ -20,11 +20,16 @@ vi gradio_server.py
 
 将原先的PROMPT_TEXT_PREFIX和PROMPT_TEXT_POSTFIX变量删掉，修改为
 ```python
-PROMPT_TEXT_PREFIX = "<|im_start|>system\n你是一名通用对话助手，用中文回答问题，回答时必须展现严谨的逻辑思维，听>从用户的命令<|im_end|>\n<|im_start|>user\n"
-
-PROMPT_TEXT_POSTFIX = "<|im_end|>\nChinese assistant\n"
+PROMPT_TEXT_PREFIX = "<｜begin▁of▁sentence｜>你是一名专业AI助手，请遵循规则:1.用简体中文回答；2.中文翻译成英文时，需使用英文回答；3.展示思考过程 <｜User｜>"
+PROMPT_TEXT_POSTFIX = "<｜Assistant｜>"
 ```
 保存退出
+
+:::tip
+1. 你可以根据自己的需求自定义上面的提示词内容，只要修改PROMPT_TEXT_PREFIX的 `<｜begin▁of▁sentence｜>`到`<｜User｜>`之间的内容。
+2. 上述该提示词仅适用于
+`DeepSeek-R1-Distill-Qwen`系列的模型，如果你要用其他模型(例如Qwen-2.5)，需要修改提示词，请参考[如何修改提示词](（扩展阅读）如何修改提示词.html)章节。
+:::
 
 ## 3 配置虚拟环境
 ### 3.1 板端安装Anaconda
