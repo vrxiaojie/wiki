@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { withSidebar } from 'vitepress-sidebar';
 import markdownItKatex from 'markdown-it-katex'
+import { La51Plugin } from 'vitepress-plugin-51la'
 
 const customElements = [
   'math',
@@ -171,6 +172,16 @@ const vitePressOptions = {
         isCustomElement: (tag) => customElements.includes(tag)
       }
     }
+  },
+
+  vite: {
+    plugins: [
+      //51.la统计
+      La51Plugin({
+        id: '3LDzbFYu6VQ4y34t',
+        ck: '3LDzbFYu6VQ4y34t'
+      })
+    ]
   }
 }
 
