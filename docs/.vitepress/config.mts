@@ -138,7 +138,11 @@ const vitePressOptions = {
         items: [
           { text: '香橙派5部署Deepseek-R1-1.5B蒸馏模型', link: '/Deepseek-R1-RK3588-OrangePi5/' },
         ]
-      }
+      },
+      {
+        text: '软硬件知识',
+        link: '/Hardware-and-Software-Knowledge/'
+      },
     ],
 
     socialLinks: [
@@ -223,6 +227,15 @@ const vitePressSidebarOptions = [
     useTitleFromFileHeading: true,
     sortMenusByFrontmatterOrder: true,
     collapsed: false,
+  },
+  {
+    documentRootPath: 'docs',
+    scanStartPath: 'Hardware-and-Software-Knowledge',
+    resolvePath: '/Hardware-and-Software-Knowledge/',
+    basePath: '/Hardware-and-Software-Knowledge/',
+    useTitleFromFileHeading: true,
+    sortMenusByFrontmatterOrder: true,
+    collapsed: true,
   },
 ];
 
