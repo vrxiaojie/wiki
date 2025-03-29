@@ -1,10 +1,11 @@
 # 目录
 
-## 开发板学习
+## 开发板笔记
 [瑞萨RA4E2开发板](</RA4E2-Develop-Board/>)
 
 [瑞萨RA2L1开发板](</RA2L1-Develop-Board/>)
 
+[泰山派笔记](</TSPI-tai-shan-pai-RK3566/>)
 
 ## DIY项目
 [基于CW32的物联网电压电流表](/CW32-volt-ammeter/)

@@ -129,6 +129,13 @@ const vitePressOptions = {
         text: '项目合集',
         items: [
           { text: '基于CW32的物联网电压电流表', link: '/CW32-volt-ammeter/' },
+
+        ]
+      },
+      {
+        text: '开发板笔记',
+        items: [
+          { text: '泰山派笔记', link: '/TSPI-tai-shan-pai-RK3566/' },
           { text: '瑞萨RA4E2开发板', link: '/RA4E2-Develop-Board/' },
           { text: '瑞萨RA2L1开发板', link: '/RA2L1-Develop-Board/' },
         ]
@@ -233,6 +240,15 @@ const vitePressSidebarOptions = [
     scanStartPath: 'Hardware-and-Software-Knowledge',
     resolvePath: '/Hardware-and-Software-Knowledge/',
     basePath: '/Hardware-and-Software-Knowledge/',
+    useTitleFromFileHeading: true,
+    sortMenusByFrontmatterOrder: true,
+    collapsed: true,
+  },
+  {
+    documentRootPath: 'docs',
+    scanStartPath: 'TSPI-tai-shan-pai-RK3566',
+    resolvePath: '/TSPI-tai-shan-pai-RK3566/',
+    basePath: '/TSPI-tai-shan-pai-RK3566/',
     useTitleFromFileHeading: true,
     sortMenusByFrontmatterOrder: true,
     collapsed: true,
