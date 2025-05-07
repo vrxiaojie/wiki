@@ -18,6 +18,9 @@ hero:
 
 
 features:
+  - title: STM32 FreeRTOS学习笔记
+    details: 使用立创天空星STM32F407开发板，基于HAL库的STM32 FreeRTOS开发学习笔记
+    link: /STM32_FreeRTOS/
   - title: 基于CW32的物联网电压电流表
     details: 使用CW32F030C8T6做主控，ESP8266+MQTT协议联网上传数据的电压电流表
     link: /CW32-volt-ammeter/

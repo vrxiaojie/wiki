@@ -1,6 +1,8 @@
 # 目录
 
-## 开发板笔记
+## 开发笔记
+[STM32 FreeRTOS开发笔记](/STM32_FreeRTOS/)
+
 [瑞萨RA4E2开发板](</RA4E2-Develop-Board/>)
 
 [瑞萨RA2L1开发板](</RA2L1-Develop-Board/>)
