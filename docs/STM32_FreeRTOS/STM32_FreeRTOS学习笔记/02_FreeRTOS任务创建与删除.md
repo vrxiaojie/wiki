@@ -203,7 +203,7 @@ TaskHandle_t ex_LED2_TaskHandle = NULL;
 （3）在USER CODE BEGIN Application代码块下新增两个函数，用于驱动外部LED的闪烁任务。
 
 ```c
-void Externel_LED1_app(void *args)
+void External_LED1_app(void *args)
 {
     for (;;) {
         HAL_GPIO_TogglePin(EX_LED1_GPIO_Port, EX_LED1_Pin);
@@ -211,7 +211,7 @@ void Externel_LED1_app(void *args)
     }
 }
 
-void Externel_LED2_app(void *args)
+void External_LED2_app(void *args)
 {
     static uint8_t cnt;
     for (;;) {
@@ -228,22 +228,22 @@ void Externel_LED2_app(void *args)
 }
 ```
 
-在Externel_LED2_app函数中，我设定了一个计数变量cnt，当cnt等于5且外部LED1闪烁任务句柄不为NULL时，去删除外部LED1闪烁的任务，并置句柄为NULL，防止再次删除一个不存在的任务而导致系统宕机。
+在External_LED2_app函数中，我设定了一个计数变量cnt，当cnt等于5且外部LED1闪烁任务句柄不为NULL时，去删除外部LED1闪烁的任务，并置句柄为NULL，防止再次删除一个不存在的任务而导致系统宕机。
 
 （4）在USER CODE BEGIN RTOS_THREADS 中，调用创建动态任务的函数xTaskCreate，并传入相应参数。
 
 ```c
 xTaskCreate(LED_app, "LED app", 64, NULL, osPriorityNormal1, &LED_TaskHandle);
-xTaskCreate(Externel_LED1_app, "externel LED1 app", 64, NULL, osPriorityNormal1, &ex_LED1_TaskHandle);
-xTaskCreate(Externel_LED2_app, "externel LED2 app", 64, NULL, osPriorityNormal1, &ex_LED2_TaskHandle);
+xTaskCreate(External_LED1_app, "external LED1 app", 64, NULL, osPriorityNormal1, &ex_LED1_TaskHandle);
+xTaskCreate(External_LED2_app, "external LED2 app", 64, NULL, osPriorityNormal1, &ex_LED2_TaskHandle);
 ```
 
 （5）在USER CODE BEGIN FunctionPrototypes 中声明函数。
 
 ```c
 void LED_app(void *args);
-void Externel_LED1_app(void *args);
-void Externel_LED2_app(void *args);
+void External_LED1_app(void *args);
+void External_LED2_app(void *args);
 ```
 
 （6）编译下载，外部LED1在经过了两秒后熄灭，而外部LED2和板载LED正常闪烁。
@@ -261,8 +261,8 @@ void StartDefaultTask(void *argument)
     /* Infinite loop */
     for (;;) {
         xTaskCreate(LED_app, "LED app", 64, NULL, osPriorityNormal1, &LED_TaskHandle);
-        xTaskCreate(Externel_LED1_app, "externel LED1 app", 64, NULL, osPriorityNormal1, &ex_LED1_TaskHandle);
-        xTaskCreate(Externel_LED2_app, "externel LED2 app", 64, NULL, osPriorityNormal1, &ex_LED2_TaskHandle);
+        xTaskCreate(External_LED1_app, "external LED1 app", 64, NULL, osPriorityNormal1, &ex_LED1_TaskHandle);
+        xTaskCreate(External_LED2_app, "external LED2 app", 64, NULL, osPriorityNormal1, &ex_LED2_TaskHandle);
         vTaskDelete(NULL);
     }
     /* USER CODE END StartDefaultTask */
