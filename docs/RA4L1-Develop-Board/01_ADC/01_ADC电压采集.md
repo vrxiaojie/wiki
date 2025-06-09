@@ -52,13 +52,13 @@ RA4L1微控制器具备多种低功耗功能，包括段码LCD显示驱动器、
 ![alt text](images/配置ADC3.png)
 
 ### 3.4 配置串口
-在`Pins--SCI--SCI9下配置模式为异步UART`，程序自动配好了RXD和TXD引脚。
+在`Pins--SCI--SCI4下配置模式为异步UART`，程序自动配好了RXD和TXD引脚。
 ![alt text](images/配置串口1.png)
 
 在`Stacks`页新建`UART(r_sci_uart)`
 ![alt text](images/配置串口2.png)
 
-打开属性页面，修改名称和通道，以及回调函数名称、中断优先级为2。
+打开属性页面，修改名称和通道，以及回调函数名称、中断优先级为2。**注意将波特率修改为57600**，默认的115200会导致串口乱码。
 ![alt text](images/配置串口3.png)
 
 ### 3.5 printf重定向至串口
@@ -85,12 +85,12 @@ printf函数通常需要设置堆栈大小。因为printf函数在运行时需�
 /* 发送完成标志 */
 volatile int uart_send_complete_flag = 0;
 
-/* 调试串口 UART9 初始化 */
+/* 调试串口 uart4 初始化 */
 void UART_Init(void)
 {
    fsp_err_t err = FSP_SUCCESS;
 
-   err = R_SCI_UART_Open (&g_uart9_ctrl, &g_uart9_cfg);
+   err = R_SCI_UART_Open (&g_uart4_ctrl, &g_uart4_cfg);
    assert(FSP_SUCCESS == err);
 }
 
@@ -100,7 +100,7 @@ int _write(int fd, char *pBuffer, int size); //防止编译警告
 int _write(int fd, char *pBuffer, int size)
 {
    (void)fd;
-   R_SCI_UART_Write(&g_uart9_ctrl, (uint8_t *)pBuffer, (uint32_t)size);
+   R_SCI_UART_Write(&g_uart4_ctrl, (uint8_t *)pBuffer, (uint32_t)size);
    while(uart_send_complete_flag == 0);
    uart_send_complete_flag = 0;
 
@@ -110,7 +110,7 @@ int _write(int fd, char *pBuffer, int size)
 int fputc(int ch, FILE *f)
 {
    (void)f;
-   R_SCI_UART_Write(&g_uart9_ctrl, (uint8_t *)&ch, 1);
+   R_SCI_UART_Write(&g_uart4_ctrl, (uint8_t *)&ch, 1);
    while(uart_send_complete_flag == 0);
    uart_send_complete_flag = 0;
 
@@ -119,7 +119,7 @@ int fputc(int ch, FILE *f)
 #endif
 
 /* 串口中断回调 */
-void uart9_callback (uart_callback_args_t * p_args)
+void uart4_callback (uart_callback_args_t * p_args)
 {
    switch (p_args->event)
    {
@@ -233,9 +233,12 @@ void hal_entry(void)
 
 
 ## 4. 编译下载测试
+请注意，由于我这边是用的JLINK下载+使用JLINK串口，因此我使用的是P206和P207，如果你是用USB转串口的方式，请在第2节部分修改为SCI9，并配置通道9.
+
 P510在开发板的位置如下所示，将该引脚分别接到VCC和GND，用串口查看打印的结果。
 ![alt text](images/P510_AN025通道.png)
 
+![alt text](images/串口输出.png)
 
 ## 问题及解决方法
 ### 1. cannot open linker script file fsp.ld: No such file or directory
@@ -246,6 +249,7 @@ C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/../lib/gcc/
 collect2.exe: error: ld returned 1 exit status
 ```
 ![alt text](images/问题1.png)
+
 
 **解决方法**
 项目--C/C++Project Settings
@@ -259,3 +263,9 @@ collect2.exe: error: ld returned 1 exit status
 ![alt text](images/问题1解决方法3.png)
 
 再次编译，即可解决问题
+
+### 2. 使用J-Flash Lite下载程序时找不到目标芯片
+在J-Flash Lite中搜索`R7FA4L1BD`，发现找不到该芯片，原因是J-Link软件版本过旧，RA4L1是今年刚出的，需要更新J-Link。
+
+**解决方法**
+前往[J-Link官网](https://www.segger.com/downloads/jlink/)更新J-Link软件。我使用的是V8.42版本，能找到芯片并正常下载程序。
