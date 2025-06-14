@@ -139,6 +139,7 @@ const vitePressOptions = {
           { text: '泰山派笔记', link: '/TSPI-tai-shan-pai-RK3566/' },
           { text: '瑞萨RA4E2开发板', link: '/RA4E2-Develop-Board/' },
           { text: '瑞萨RA2L1开发板', link: '/RA2L1-Develop-Board/' },
+          { text: '瑞萨RA4L1开发板', link: '/RA4L1-Develop-Board/' },
         ]
       },
       {
@@ -259,6 +260,15 @@ const vitePressSidebarOptions = [
     scanStartPath: 'STM32_FreeRTOS',
     resolvePath: '/STM32_FreeRTOS/',
     basePath: '/STM32_FreeRTOS/',
+    useTitleFromFileHeading: true,
+    sortMenusByFrontmatterOrder: true,
+    collapsed: false,
+  },
+  {
+    documentRootPath: 'docs',
+    scanStartPath: 'RA4L1-Develop-Board',
+    resolvePath: '/RA4L1-Develop-Board/',
+    basePath: '/RA4L1-Develop-Board/',
     useTitleFromFileHeading: true,
     sortMenusByFrontmatterOrder: true,
     collapsed: false,

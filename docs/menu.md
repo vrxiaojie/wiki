@@ -7,6 +7,8 @@
 
 [瑞萨RA2L1开发板](</RA2L1-Develop-Board/>)
 
+[瑞萨RA4L1开发板](</RA4L1-Develop-Board/>)
+
 [泰山派笔记](</TSPI-tai-shan-pai-RK3566/>)
 
 ## DIY项目
