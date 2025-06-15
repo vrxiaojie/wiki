@@ -85,7 +85,7 @@ Device Drivers
 修改固件以及NVRAM路径，这里是指Ubuntu系统内的路径，后文会说如何将固件复制进去。
 Firmware path和NVRAM path分别修改为
 ```text
-/lib/firmware/tfw_bcm43438a1.bin
+/lib/firmware/fw_bcm43438a1.bin
 /lib/firmware/nvram_ap6212a.txt
  ```
 ![alt text](images/image3.png)
