@@ -23,4 +23,4 @@
 
 将会在**24小时内**通过邮件回复设备激活码，请注意查收！
 
-如超时未收到，请先检查垃圾邮件。若仍没有，开源广场私信作者：https://oshwhub.com/vrxiaojie/workss
+如超时未收到，请先检查垃圾邮件。若仍没有，开源广场私信作者：https://oshwhub.com/vrxiaojie/works
