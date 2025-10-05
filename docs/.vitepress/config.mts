@@ -129,7 +129,7 @@ const vitePressOptions = {
         text: '项目合集',
         items: [
           { text: '基于CW32的物联网电压电流表', link: '/CW32-volt-ammeter/' },
-
+          { text: '物联网桌面环境监测仪', link: '/iot_env_monitor_guide/项目简介/' },
         ]
       },
       {
@@ -272,6 +272,18 @@ const vitePressSidebarOptions = [
     useTitleFromFileHeading: true,
     sortMenusByFrontmatterOrder: true,
     collapsed: false,
+  },
+  {
+    documentRootPath: 'docs',
+    scanStartPath: 'iot_env_monitor_guide',
+    resolvePath: '/iot_env_monitor_guide/',
+    basePath: '/iot_env_monitor_guide/',
+    useTitleFromFileHeading: true,
+    useTitleFromFrontmatter: true,
+    useFolderTitleFromIndexFile: true, // 文件夹标题使用index.md中的title属性
+    sortMenusByFrontmatterOrder: true,
+    collapsed: false,
+    sortFolderTo: 'bottom', // 设置文件夹均位于文件下方显示
   },
 ];
 
