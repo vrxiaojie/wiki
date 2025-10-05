@@ -177,7 +177,10 @@ const vitePressOptions = {
   markdown: {
     config: (md) => {
       md.use(markdownItKatex)
-    }
+    },
+    image: {
+      lazyLoading: true
+    },
   },
   vue: {
     template: {
