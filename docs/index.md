@@ -18,6 +18,9 @@ hero:
 
 
 features:
+  - title: IoT桌面环境监测仪
+    details: 物联网桌面环境监测仪，主控ESP32S3，可用监测温度、湿度、CO2、VOC指数。可通过WIFI传输数据到手机及云端
+    link: /iot_env_monitor_guide/项目简介
   - title: STM32 FreeRTOS学习笔记
     details: 使用立创天空星STM32F407开发板，基于HAL库的STM32 FreeRTOS开发学习笔记
     link: /STM32_FreeRTOS/
