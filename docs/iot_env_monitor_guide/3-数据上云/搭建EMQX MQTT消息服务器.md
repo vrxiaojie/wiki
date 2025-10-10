@@ -53,8 +53,6 @@ vim docker-compose.yml
 
 将以下内容复制进去
 ```yml
-version: '3.8'
-
 services:
   emqx:
     image: hub.rat.dev/emqx/emqx:5.8.8
@@ -110,7 +108,7 @@ EMQX_HOST=emqx.dev: 设置容器环境变量，EMQX 会用来作为节点主机�
 ### 启动EMQX容器
 输入命令，其中 `up` 指的是创建并启动容器， `-d` 参数是`detached`，让容器在后台运行，无需占用终端
 ```shell
-docker compose up -d
+sudo docker compose up -d
 ```
 
 它会先在本地寻找名为`hub.rat.dev/emqx/emqx:5.8.8`的镜像，若没有，则自动拉取镜像，如下图
@@ -153,7 +151,7 @@ docker compose up -d
 ### 使用MQTTX测试
 前往[MQTTX官网下载](https://mqttx.app/zh)
 
-打开MQTTX软件后，新建一个连接。**用户名和密码**是在[新增客户端](./安装EMQX#新增客户端)这一小节设置的（我又新增了一个用户名为`mqttx`专门用于测试的）；**服务器地址**是在CMD命令行中用`ipconfig`获取到的的IP（或者直接填localhost）；**端口**默认1883
+打开MQTTX软件后，新建一个连接。**用户名和密码**是在[新增客户端](#新增客户端)这一小节设置的（我又新增了一个用户名为`mqttx`专门用于测试的）；**服务器地址**是在CMD命令行中用`ipconfig`获取到的的IP（或者直接填localhost）；**端口**默认1883
 
 ![picture 11](images/20251008185412.png)   
 
