@@ -70,8 +70,6 @@ services:
 ```
 
 :::details 参数说明
-`version`: 指定 Compose 文件格式版本
-
 `services`: 服务集合的根节点，下面定义一个或多个容器服务
 
 `emqx`: 服务名，用于 Compose 内部引用和网络 DNS 名称
