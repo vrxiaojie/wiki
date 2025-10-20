@@ -93,6 +93,7 @@ const customElements = [
 
 // https://vitepress.dev/reference/site-config
 const vitePressOptions = {
+  ignoreDeadLinks: true,
   title: "VR小杰的技术文档中心",
   description: "",
   lang: 'zh-CN',
