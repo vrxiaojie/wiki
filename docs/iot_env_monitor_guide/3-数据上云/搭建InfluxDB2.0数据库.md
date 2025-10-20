@@ -35,6 +35,7 @@ services:
     volumes:
       - ./data:/var/lib/influxdb2
       - ./config:/etc/influxdb2
+    network_mode: "bridge"
 ```
 
 ### 运行容器
