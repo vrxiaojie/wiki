@@ -8,14 +8,11 @@ hero:
   tagline: 记录开发过程
   actions:
     - theme: brand
-      text: 📁查看文档
+      text: 📁文档目录
       link: /menu
     - theme: alt
-      text: 🔗个人博客
-      link: https://blog.vrxiaojie.top
-  image:
-    src: /logo.png
-
+      text: 🔗bilibili@VR小杰
+      link: https://space.bilibili.com/11526854
 
 features:
   - title: IoT桌面环境监测仪
