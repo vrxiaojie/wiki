@@ -5,6 +5,11 @@ order: 2
 # 基于VSCode插件的自动烧录
 阅读本节前，请确保你已经在VSCode上正确安装了ESP-IDF插件，并且成功编译。具体请参见文档 [安装ESP-IDF（基于VSCode插件）](../1-项目编译/安装ESP-IDF（基于VSCode插件）) 和 [拉取工程仓库并编译](../1-项目编译/拉取工程仓库并编译) 
 
+## 下载安装USBIPD
+USBIPD是将本地连接的USB设备共享到其他计算机的软件，wsl usb manager是依赖于USBIPD的[下载地址](https://github.com/dorssel/usbipd-win/releases)
+
+下载的文件名为`usbipd-win_5.3.0_x64.msi`
+
 ## 下载wsl usb manager
 这是一个GitHub上的开源项目，通过可视化的界面，将电脑USB设备快速绑定到wsl上，以便于程序的烧录。
 
