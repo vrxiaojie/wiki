@@ -567,7 +567,7 @@ sudo resize2fs /dev/mmcblk0p6
 ## 5 最终效果
 连接WIFI界面
 
- ![alt text](images/image29.png)
+ ![alt text](images/image29.jpg)
 
 系统信息界面，正确识别了Mali G52 GPU
 
