@@ -18,7 +18,3 @@
 
 ## 嵌入式教程
 [香橙派5部署Deepseek-R1-1.5B蒸馏模型](/Deepseek-R1-RK3588-OrangePi5/)
-
-## 软硬件知识
-
-[软硬件知识](/Hardware-and-Software-Knowledge/)
