@@ -129,7 +129,6 @@ const vitePressOptions = {
       {
         text: '项目合集',
         items: [
-          { text: '基于CW32的物联网电压电流表', link: '/CW32-volt-ammeter/' },
           { text: '物联网桌面环境监测仪', link: '/iot_env_monitor_guide/项目简介/' },
         ]
       },
@@ -138,9 +137,6 @@ const vitePressOptions = {
         items: [
           { text: 'STM32 FreeRTOS笔记', link: '/STM32_FreeRTOS/' },
           { text: '泰山派笔记', link: '/TSPI-tai-shan-pai-RK3566/' },
-          { text: '瑞萨RA4E2开发板', link: '/RA4E2-Develop-Board/' },
-          { text: '瑞萨RA2L1开发板', link: '/RA2L1-Develop-Board/' },
-          { text: '瑞萨RA4L1开发板', link: '/RA4L1-Develop-Board/' },
         ]
       },
       {
@@ -203,33 +199,6 @@ const vitePressOptions = {
 const vitePressSidebarOptions = [
   {
     documentRootPath: 'docs',
-    scanStartPath: 'CW32-volt-ammeter',
-    basePath: '/CW32-volt-ammeter/',
-    resolvePath: '/CW32-volt-ammeter/',
-    useTitleFromFileHeading: true,
-    sortMenusByFrontmatterOrder: true,
-    collapsed: false,
-  },
-  {
-    documentRootPath: 'docs',
-    scanStartPath: 'RA4E2-Develop-Board',
-    resolvePath: '/RA4E2-Develop-Board/',
-    basePath: '/RA4E2-Develop-Board/',
-    useTitleFromFileHeading: true,
-    sortMenusByFrontmatterOrder: true,
-    collapsed: false,
-  },
-  {
-    documentRootPath: 'docs',
-    scanStartPath: 'RA2L1-Develop-Board',
-    resolvePath: '/RA2L1-Develop-Board/',
-    basePath: '/RA2L1-Develop-Board/',
-    useTitleFromFileHeading: true,
-    sortMenusByFrontmatterOrder: true,
-    collapsed: false,
-  },
-  {
-    documentRootPath: 'docs',
     scanStartPath: 'Deepseek-R1-RK3588-OrangePi5',
     resolvePath: '/Deepseek-R1-RK3588-OrangePi5/',
     basePath: '/Deepseek-R1-RK3588-OrangePi5/',
@@ -251,15 +220,6 @@ const vitePressSidebarOptions = [
     scanStartPath: 'STM32_FreeRTOS',
     resolvePath: '/STM32_FreeRTOS/',
     basePath: '/STM32_FreeRTOS/',
-    useTitleFromFileHeading: true,
-    sortMenusByFrontmatterOrder: true,
-    collapsed: false,
-  },
-  {
-    documentRootPath: 'docs',
-    scanStartPath: 'RA4L1-Develop-Board',
-    resolvePath: '/RA4L1-Develop-Board/',
-    basePath: '/RA4L1-Develop-Board/',
     useTitleFromFileHeading: true,
     sortMenusByFrontmatterOrder: true,
     collapsed: false,
